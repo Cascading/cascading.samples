@@ -23,7 +23,7 @@ repositories {
 dependencies {
   compile('cascading:cascading-core:2.0.+') { exclude group: 'log4j' }
   compile('cascading:cascading-xml:2.0.+')
-  compile('cascading:cascading-hadoop:2.0.+') { transitive = false }
+  compile('cascading:cascading-hadoop:2.0.+')
 }
 
 jar {
