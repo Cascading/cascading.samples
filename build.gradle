@@ -81,7 +81,7 @@ subprojects {
   execSample << {
 
     assert hadoopHome
-    ant.exec( dir: execPath, executable: "${hadoopHome}/bin/hadoop", output: "${verifyPath}/console.txt" ) {
+    ant.exec( dir: execPath, executable: "${hadoopHome}/bin/yarn", output: "${verifyPath}/console.txt" ) {
       arg( line: commandLines[ project.name ] )
     }
   }
