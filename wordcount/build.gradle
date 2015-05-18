@@ -46,8 +46,8 @@ dependencies {
 
   // these runtime deps allow the sample app to be run in an ide
 
-  runtime group: 'org.slf4j', name: 'slf4j-api', version: '1.7.2'
-  runtime group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.2'
+  runtime group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5'
+  runtime group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.5'
 
   // hadoop deps
   runtime group: 'org.apache.tez', name: 'tez-api', version: tezVersion
