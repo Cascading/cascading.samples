@@ -39,9 +39,9 @@ above 'output' directory will show up in HDFS.
 When running in Tez local mode:
 
 ```shell
-export TEZ_HOME=$BASEDIR/tez-0.5.0
-export YARN_HOME=$BASEDIR/hadoop-2.4.1
-export HADOOP_HOME=$BASEDIR/hadoop-2.4.1
+export TEZ_HOME=$BASEDIR/tez-0.6.1
+export YARN_HOME=$BASEDIR/hadoop-2.6.0
+export HADOOP_HOME=$BASEDIR/hadoop-2.6.0
 
 export YARN_CLASSPATH=$TEZ_HOME/jars/*:$TEZ_HOME/jars/lib/*
 export HADOOP_CLASSPATH=$TEZ_HOME/jars/*:$TEZ_HOME/jars/lib/*
