@@ -34,7 +34,7 @@ if( System.properties[ 'aws.properties' ] )
 
 def hadoopHome = System.properties[ 'hadoop.home' ]
 
-ext.cascadingVersionMajor = '3.0.0-wip-+'
+ext.cascadingVersionMajor = '3.0.0'
 
 ext.commandLines = [
         logparser: "jar logparser.jar data/apache.200.txt output",

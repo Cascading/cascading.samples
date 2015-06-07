@@ -8,10 +8,10 @@ import java.text.SimpleDateFormat
 
 buildscript {
   repositories {
-    maven { url 'http://repo.spring.io/plugins-release' }
+    jcenter()
   }
   dependencies {
-    classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.5'
+    classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.+'
   }
 }
 
@@ -19,14 +19,11 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-apply plugin: 'propdeps'
-apply plugin: 'propdeps-maven'
-apply plugin: 'propdeps-idea'
-apply plugin: 'propdeps-eclipse'
+apply plugin: 'provided-base'
 
-ext.hadoopVersion = "2.4.1"
-ext.tezVersion = "0.5.3"
-ext.cascadingVersion = "3.0.0-wip-+"
+ext.hadoopVersion = "2.6.0"
+ext.tezVersion = "0.6.1"
+ext.cascadingVersion = "3.0.0"
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -49,14 +46,14 @@ dependencies {
 
   // these runtime deps allow the sample app to be run in an ide
 
-  runtime group: 'org.slf4j', name: 'slf4j-api', version: '1.7.2'
-  runtime group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.2'
+  runtime group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5'
+  runtime group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.5'
 
   // hadoop deps
   runtime group: 'org.apache.tez', name: 'tez-api', version: tezVersion
   runtime group: 'org.apache.tez', name: 'tez-dag', version: tezVersion
   runtime group: 'org.apache.tez', name: 'tez-mapreduce', version: tezVersion
-  runtime group: 'org.apache.tez', name: 'tez-yarn-timeline-history', version: tezVersion
+  runtime group: 'org.apache.tez', name: 'tez-yarn-timeline-history-with-acls', version: tezVersion
 }
 
 jar {
